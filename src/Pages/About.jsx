@@ -205,7 +205,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Eki Zulfar Rachman
+                Trần Phan Nhật Hào
               </span>
             </h2>
             
@@ -214,7 +214,10 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             Seorang lulusan Teknik Jaringan Komputer dan Telekomunikasi yang memiliki ketertarikan besar dalam pengembangan Front-End. Saya berfokus pada menciptakan pengalaman digital yang menarik dan selalu berusaha memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
+             Được trang bị các kĩ năng và kiến thức về kĩ năng lập trình web, 
+                em mong muốn trở thành một lập trình viên có thể mang lại nhiều giải pháp 
+                và ý tưởng của mình góp phần phát triển cho công ty. 
+                Đồng thời muốn học hỏi và nâng cao kiến thức, trình độ chuyên môn của bản thân qua môi trường làm việc của công ty.
             </p>
 
                {/* Quote Section */}
