@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useMemo } from "react"
+import { useEffect, memo, useMemo } from "react"
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -21,11 +21,12 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400" />
-      Transforming ideas into digital experiences
+      <span>Transforming ideas into digital experiences</span>
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
 ));
+Header.displayName = 'Header';
 
 const ProfileImage = memo(() => (
   <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
