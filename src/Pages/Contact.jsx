@@ -133,7 +133,7 @@ const ContactPage = () => {
           data-aos-duration="1100"
           className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
         >
-          Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
+          Have a question? Send me a message, and I'll get back to you right away.
         </p>
       </div>
 
@@ -152,7 +152,7 @@ const ContactPage = () => {
                   Contact me
                 </h2>
                 <p className="text-gray-400">
-                  Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara.
+                  Anything you'd like to discuss? Send me a message and let's talk.
                 </p>
               </div>
               <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
