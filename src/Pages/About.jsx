@@ -215,10 +215,12 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             Được trang bị các kĩ năng và kiến thức về kĩ năng lập trình web, 
-                em mong muốn trở thành một lập trình viên có thể mang lại nhiều giải pháp 
-                và ý tưởng của mình góp phần phát triển cho công ty. 
-                Đồng thời muốn học hỏi và nâng cao kiến thức, trình độ chuyên môn của bản thân qua môi trường làm việc của công ty.
+            A software developer specializing in building robust web solutions with C# and the .NET ecosystem.
+
+            My expertise lies in ASP.NET Core Web API, Entity Framework Core, and SQL Server. 
+            I am a firm believer in writing clean, 
+            well-structured code and am passionate about tackling new challenges, 
+            particularly within cloud platforms like Azure.
             </p>
 
                {/* Quote Section */}
