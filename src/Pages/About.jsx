@@ -215,7 +215,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            A software developer specializing in building robust web solutions with C# and the .NET ecosystem.
+            <p>A software developer specializing in building robust web solutions with C# and the .NET ecosystem.</p>
 
             My expertise lies in ASP.NET Core Web API, Entity Framework Core, and SQL Server. 
             I am a firm believer in writing clean, 
