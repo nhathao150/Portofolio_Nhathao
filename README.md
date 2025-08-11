@@ -20,4 +20,3 @@ This project is built using modern web technologies:
   - **Lucide** - Icon library
   - **Material UI** - React component library
   - **SweetAlert2** - Beautiful alert dialogs
-
