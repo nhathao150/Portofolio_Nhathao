@@ -1,4 +1,3 @@
-
 import { Home, ArrowLeft } from 'lucide-react';
 
 export default function NotFoundPage() {
@@ -7,7 +6,7 @@ export default function NotFoundPage() {
   };
 
   const handleGoHome = () => {
-    // In a real app, you would use your router's navigation
+    
     window.location.href = '/';
   };
 

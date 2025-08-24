@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback, memo } from "react"
+import PropTypes from 'prop-types';
+import { useState, useEffect, useCallback, memo } from "react"
 import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
@@ -18,6 +19,10 @@ const StatusBadge = memo(() => (
     </div>
   </div>
 ));
+StatusBadge.displayName = 'StatusBadge'
+StatusBadge.propTypes = {
+  tech: PropTypes.string.isRequired,
+};
 
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
@@ -38,12 +43,21 @@ const MainTitle = memo(() => (
     </h1>
   </div>
 ));
+MainTitle.displayName = 'MainTitle'
+MainTitle.propTypes = {
+  tech: PropTypes.string.isRequired,
+};
 
 const TechStack = memo(({ tech }) => (
   <div className="px-4 py-2 hidden sm:block rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300 hover:bg-white/10 transition-colors">
     {tech}
   </div>
 ));
+TechStack.displayName = 'TechStack'
+TechStack.propTypes = {
+  tech: PropTypes.string.isRequired,
+};
+
 
 const CTAButton = memo(({ href, text, icon: Icon }) => (
   <a href={href}>
@@ -61,6 +75,12 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
     </button>
   </a>
 ));
+CTAButton.displayName = 'CTAButton'
+CTAButton.propTypes = {
+  href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.elementType.isRequired
+};
 
 const SocialLink = memo(({ icon: Icon, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer">
@@ -72,7 +92,13 @@ const SocialLink = memo(({ icon: Icon, link }) => (
     </button>
   </a>
 ));
-
+SocialLink.displayName = 'SocialLink'
+SocialLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.elementType.isRequired,
+  link: PropTypes.string.isRequired,
+};
 // Constants
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
@@ -139,7 +165,7 @@ const Home = () => {
       isTyping ? TYPING_SPEED : ERASING_SPEED
     );
     return () => clearTimeout(timeout);
-  }, [handleTyping]);
+  }, [handleTyping, isTyping]);
 
   // Lottie configuration
   const lottieOptions = {

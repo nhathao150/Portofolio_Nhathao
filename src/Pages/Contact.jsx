@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
 import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import SocialLinks from "../components/SocialLinks";
 import Komentar from "../components/Commentar";
 import Swal from "sweetalert2";
@@ -35,8 +34,8 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     Swal.fire({
-      title: 'Mengirim Pesan...',
-      html: 'Harap tunggu selagi kami mengirim pesan Anda',
+      title: 'Sending message...',
+      html: 'Please wait while we send your message.',
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
@@ -44,17 +43,17 @@ const ContactPage = () => {
     });
 
     try {
-      // Ganti dengan email Anda di FormSubmit
+      // Replace with your email in FormSubmit
       const formSubmitUrl = 'https://formsubmit.co/tranphannhathao159@gmail.com';
       
-      // Siapkan data form untuk FormSubmit
+      // Prepare form data for FormSubmit
       const submitData = new FormData();
       submitData.append('name', formData.name);
       submitData.append('email', formData.email);
       submitData.append('message', formData.message);
-      submitData.append('_subject', 'Pesan Baru dari Website Portfolio');
-      submitData.append('_captcha', 'false'); // Nonaktifkan captcha
-      submitData.append('_template', 'table'); // Format email sebagai tabel
+      submitData.append('_subject', 'New Message from Portfolio Website');
+      submitData.append('_captcha', 'false'); 
+      submitData.append('_template', 'table'); 
 
       await axios.post(formSubmitUrl, submitData, {
         headers: {
@@ -64,8 +63,8 @@ const ContactPage = () => {
 
      
       Swal.fire({
-        title: 'Berhasil!',
-        text: 'Pesan Anda telah berhasil terkirim!',
+        title: 'Success!',
+        text: 'Your message has been sent successfully!',
         icon: 'success',
         confirmButtonColor: '#6366f1',
         timer: 2000,
@@ -133,7 +132,7 @@ const ContactPage = () => {
           data-aos-duration="1100"
           className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
         >
-          Have a question? Send me a message, and I'll get back to you right away.
+          Have a question? Send me a message, and I&apos;ll get back to you right away.
         </p>
       </div>
 
@@ -152,7 +151,7 @@ const ContactPage = () => {
                   Contact me
                 </h2>
                 <p className="text-gray-400">
-                  Anything you'd like to discuss? Send me a message and let's talk.
+                  Anything you&apos;d like to discuss? Send me a message and let&apos;s talk.
                 </p>
               </div>
               <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
