@@ -229,13 +229,10 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            <p>A software developer specializing in building robust web solutions with C# and the .NET ecosystem.</p>
-
-            My expertise lies in ASP.NET Core Web API, Entity Framework Core, and SQL Server. 
-            I am a firm believer in writing clean, 
-            well-structured code and am passionate about tackling new challenges, 
-            particularly within cloud platforms like Azure.
-            </p>
+            Full-Stack developer with a solid foundation in C# & ASP.NET Core, 
+            and hands-on experience building modern web applications using React. 
+            Capable of developing a product from database design,
+            API building to completing highly interactive user interfaces
 
                {/* Quote Section */}
       <div 
