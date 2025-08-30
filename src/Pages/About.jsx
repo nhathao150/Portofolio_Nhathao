@@ -233,7 +233,7 @@ const AboutPage = () => {
             and hands-on experience building modern web applications using React. 
             Capable of developing a product from database design,
             API building to completing highly interactive user interfaces
-
+            </p>
                {/* Quote Section */}
       <div 
         className="relative bg-gradient-to-br from-[#6366f1]/5 via-transparent to-[#a855f7]/5 border border-gradient-to-r border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
