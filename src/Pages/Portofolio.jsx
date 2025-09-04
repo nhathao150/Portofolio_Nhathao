@@ -10,8 +10,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import CardProject from "../components/CardProject";
 import TechStackIcon from "../components/TechStackIcon";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useAOS } from "../hooks/useAOS";
 import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
 
@@ -129,11 +128,8 @@ export default function FullWidthTabs() {
   const isMobile = window.innerWidth < 768;
   const initialItems = isMobile ? 4 : 6;
 
-  useEffect(() => {
-    AOS.init({
-      once: false,
-    });
-  }, []);
+  // Use custom AOS hook
+  useAOS({ once: false });
 
 
   const fetchData = useCallback(async () => {

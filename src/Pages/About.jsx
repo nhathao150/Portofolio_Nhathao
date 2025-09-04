@@ -1,7 +1,6 @@
 import { useEffect, memo, useMemo } from "react"
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles } from "lucide-react"
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { useAOS } from '../hooks/useAOS'
 import PropTypes from 'prop-types';
 
 
@@ -54,7 +53,7 @@ const ProfileImage = memo(() => (
           
           <img
             src="/Photo.jpg"
-            alt="Profile"
+            alt="Trần Phan Nhật Hào - Full-Stack Developer Profile Photo"
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
             loading="lazy"
           />
@@ -145,29 +144,8 @@ const AboutPage = () => {
     };
   }, []);
 
-  // Optimized AOS initialization
-  useEffect(() => {
-    const initAOS = () => {
-      AOS.init({
-        once: false, 
-      });
-    };
-
-    initAOS();
-    
-    // Debounced resize handler
-    let resizeTimer;
-    const handleResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(initAOS, 250);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      clearTimeout(resizeTimer);
-    };
-  }, []);
+  // Use custom AOS hook
+  useAOS({ once: false });
 
   // Memoized stats data
   const statsData = useMemo(() => [

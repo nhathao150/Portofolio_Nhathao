@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import SocialLinks from "../components/SocialLinks";
 import Komentar from "../components/Commentar";
 import Swal from "sweetalert2";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useAOS } from "../hooks/useAOS";
 import axios from "axios";
 
 const ContactPage = () => {
@@ -15,11 +14,8 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      once: false,
-    });
-  }, []);
+  // Use custom AOS hook
+  useAOS({ once: false });
 
   const handleChange = (e) => {
     const { name, value } = e.target;

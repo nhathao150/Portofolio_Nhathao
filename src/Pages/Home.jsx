@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect, useCallback, memo } from "react"
 import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { useAOS } from '../hooks/useAOS'
 
 // Memoized Components
 const StatusBadge = memo(() => (
@@ -20,9 +19,6 @@ const StatusBadge = memo(() => (
   </div>
 ));
 StatusBadge.displayName = 'StatusBadge'
-StatusBadge.propTypes = {
-  tech: PropTypes.string.isRequired,
-};
 
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
@@ -44,9 +40,6 @@ const MainTitle = memo(() => (
   </div>
 ));
 MainTitle.displayName = 'MainTitle'
-MainTitle.propTypes = {
-  tech: PropTypes.string.isRequired,
-};
 
 const TechStack = memo(({ tech }) => (
   <div className="px-4 py-2 hidden sm:block rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300 hover:bg-white/10 transition-colors">
@@ -94,8 +87,6 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 ));
 SocialLink.displayName = 'SocialLink'
 SocialLink.propTypes = {
-  href: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   icon: PropTypes.elementType.isRequired,
   link: PropTypes.string.isRequired,
 };
@@ -119,20 +110,8 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
-  // Optimize AOS initialization
-  useEffect(() => {
-    const initAOS = () => {
-      AOS.init({
-        once: true,
-        offset: 10,
-       
-      });
-    };
-
-    initAOS();
-    window.addEventListener('resize', initAOS);
-    return () => window.removeEventListener('resize', initAOS);
-  }, []);
+  // Use custom AOS hook
+  useAOS();
 
   useEffect(() => {
     setIsLoaded(true);
