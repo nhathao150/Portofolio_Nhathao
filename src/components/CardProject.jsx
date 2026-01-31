@@ -89,7 +89,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
 CardProject.propTypes = {
   Img: PropTypes.string.isRequired,
   Title: PropTypes.string.isRequired,
-  Description: PropTypes.string.isRequired,
+  Description: PropTypes.string,
   Link: PropTypes.string,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };

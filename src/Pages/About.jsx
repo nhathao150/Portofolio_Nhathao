@@ -207,10 +207,9 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              Full-Stack developer with a solid foundation in C# & ASP.NET Core,
-              and hands-on experience building modern web applications using React.
-              Capable of developing a product from database design,
-              API building to completing highly interactive user interfaces
+              Passionate Front-end Developer with expert proficiency in the React ecosystem and modern UI libraries.
+              I specialize in crafting responsive, high-performance web interfaces with a focus on seamless user experience,
+              creative animations, and clean, maintainable code.
             </p>
             {/* Quote Section */}
             <div
